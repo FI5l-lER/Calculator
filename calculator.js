@@ -14,6 +14,10 @@ function percentage(equation) {
     answers.textContent = eval(equation+'/100')
 }
 
+function intergers(equation) {
+    alert("Hasn't been implement yet!")
+}
+
 buttons.forEach(item => {
     item.addEventListener('click', () => {
         if(item.textContent == '=') {
@@ -25,6 +29,8 @@ buttons.forEach(item => {
             equations.textContent = equations.textContent.slice(0, -1)
         } else if(item.textContent == '%') {
             percentage(equations.textContent)
+        } else if(item.textContent == '+/-') {
+            intergers(equations)
         } else {
             equations.textContent += item.textContent
         }
